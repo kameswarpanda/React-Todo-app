@@ -1,12 +1,11 @@
 import React from "react";
 import TodoItem from "./TodoItem";
-import styles from './TodoItems.module.css'
 
 export default function TodoItems({ todoItems }) {
   return (
-    <div className={styles.itemsContainer}>
+    <div className="d-flex flex-column align-items-center w-100">
       {todoItems.map((item) => (
-        <TodoItem todoDate={item.dueDate} todoName={item.name}></TodoItem>
+        <TodoItem key={item.name + item.dueDate} todoDate={item.dueDate} todoName={item.name}></TodoItem>
       ))}
     </div>
   );

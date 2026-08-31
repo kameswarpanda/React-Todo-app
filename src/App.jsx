@@ -21,10 +21,10 @@ export default function App() {
   ];
 
   return (
-    <center>
+    <div className="container text-center my-5 d-flex flex-column align-items-center">
       <TodoAppName />
       <TodoInput />
       <TodoItems todoItems={todoItems} />
-    </center>
+    </div>
   );
 }
